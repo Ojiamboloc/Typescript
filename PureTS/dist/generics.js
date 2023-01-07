@@ -14,4 +14,13 @@ function identityThree(val) {
 function identityFour(val) {
     return val;
 }
-identityFour({});
+//identityFour<Bottle>({})
+function getSearchProducs(products) {
+    //do some database operations
+    const myIndex = 4;
+    return products[myIndex];
+}
+const getMoreSearchProducts = (products) => {
+    const myIndex = 4;
+    return products[myIndex];
+};
