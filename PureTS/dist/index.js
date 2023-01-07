@@ -26,10 +26,20 @@ class User {
     get courseCount() {
         return this._courseCount;
     }
+    //No return type for setters in typescript
     set courseCount(courseNum) {
         if (courseNum <= 1) {
             throw new Error("Course count should be more than 1");
         }
         this._courseCount = courseNum;
+    }
+}
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 44;
     }
 }
